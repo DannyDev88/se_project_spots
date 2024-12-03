@@ -8,6 +8,7 @@
 
 .profile__avatar {
   margin-right: 20px;
+  border-radius: 8px;
 }
 
 .profile__column {
@@ -25,8 +26,21 @@
 
 .profile__edit-btn {
   margin-top: auto;
+  background-color: transparent;
+  border: none;
+  color: #212121;
+  display: flex;
+  gap: 8px;
+  padding: 0;
 }
 
 .profile__add-btn {
   margin-left: auto;
+  padding: 18px 32px;
+  width: 149px;
+  height: 52px;
+  margin-top: auto;
+  background-color: #212121;
+  border-radius: 8px;
+  color: transparent;
 }

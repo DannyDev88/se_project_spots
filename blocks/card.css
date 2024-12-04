@@ -2,6 +2,12 @@
   max-width: 413px;
 }
 
+.card__title {
+  font-size: 20x;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
 .card__image {
   width: 413px;
   height: 413px;
@@ -22,7 +28,4 @@
   height: 20px;
   border: none;
   background-color: transparent;
-}
-
-.card__title {
 }

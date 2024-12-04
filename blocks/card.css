@@ -1,15 +1,12 @@
-.card {
-  max-width: 413px;
-}
-
 .card__title {
-  font-size: 20x;
+  font-size: 20px;
   font-weight: 500;
   line-height: 1.2;
+  margin: 12px 0 0;
 }
 
 .card__image {
-  width: 413px;
+  width: 100%;
   height: 413px;
   object-fit: cover;
   border-radius: 8px;
@@ -28,4 +25,24 @@
   height: 20px;
   border: none;
   background-color: transparent;
+  cursor: pointer;
+  opacity: 0.4;
+  padding: 0;
+  margin: 12px 0 0;
+}
+
+.card__like-btn:hover {
+  opacity: 1;
+}
+
+@media screen and (max-width: 627px) {
+  .card__image {
+    height: 288px;
+  }
+
+  .card__title {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1;
+  }
 }

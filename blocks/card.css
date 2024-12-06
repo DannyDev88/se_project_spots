@@ -6,6 +6,8 @@
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+  max-width: calc(100% - 40px);
+  color: #212121;
 }
 
 .card__image {
@@ -45,7 +47,7 @@
 
   .card__title {
     font-size: 16px;
-    font-weight: 500;
     line-height: 1;
+    max-width: calc(100% - 30px);
   }
 }

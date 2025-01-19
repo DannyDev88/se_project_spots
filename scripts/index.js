@@ -38,8 +38,22 @@ const editModalDescriptionInput = editModal.querySelector(
 );
 
 const cardTemplate = document.querySelector("#card-template");
+const cardsList = document.querySelector(".cards__list");
 
-function getCardElement(data) {}
+function getCardElement(data) {
+  const CardElement = cardTemplate.content
+    .querySelector(".card")
+    .cloneNode(true);
+
+  const cardNameEl = CardElement.querySelector(".card__title");
+  const cardImageEl = CardElement.querySelector(".card__image");
+
+  cardNameEl.textContent = data.name;
+  cardImageEl.src = data.link;
+  cardImageEl.alt = data.name;
+
+  return CardElement;
+}
 
 function openModal() {
   editModalNameInput.value = profileName.textContent;
@@ -61,3 +75,8 @@ function handleEditFormSubmit(evt) {
 profileEditButton.addEventListener("click", openModal);
 modalCloseButton.addEventListener("click", closeModal);
 editFormElement.addEventListener("submit", handleEditFormSubmit);
+
+for (let i = 0; i < initalCards.length; i++) {
+  const CardElement = getCardElement(initalCards[i]);
+  cardsList.prepend(CardElement);
+}

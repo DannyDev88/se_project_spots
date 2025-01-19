@@ -41,18 +41,18 @@ const cardTemplate = document.querySelector("#card-template");
 const cardsList = document.querySelector(".cards__list");
 
 function getCardElement(data) {
-  const CardElement = cardTemplate.content
+  const cardElement = cardTemplate.content
     .querySelector(".card")
     .cloneNode(true);
 
-  const cardNameEl = CardElement.querySelector(".card__title");
-  const cardImageEl = CardElement.querySelector(".card__image");
+  const cardNameEl = cardElement.querySelector(".card__title");
+  const cardImageEl = cardElement.querySelector(".card__image");
 
   cardNameEl.textContent = data.name;
   cardImageEl.src = data.link;
   cardImageEl.alt = data.name;
 
-  return CardElement;
+  return cardElement;
 }
 
 function openModal() {
@@ -77,6 +77,6 @@ modalCloseButton.addEventListener("click", closeModal);
 editFormElement.addEventListener("submit", handleEditFormSubmit);
 
 for (let i = 0; i < initalCards.length; i++) {
-  const CardElement = getCardElement(initalCards[i]);
-  cardsList.prepend(CardElement);
+  const cardElement = getCardElement(initalCards[i]);
+  cardsList.prepend(cardElement);
 }

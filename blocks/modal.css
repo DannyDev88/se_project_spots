@@ -33,6 +33,7 @@
   opacity: 0.4;
   border: none;
   background-color: transparent;
+  cursor: pointer;
 }
 
 .modal__close-btn:hover {
@@ -72,6 +73,7 @@
   border-radius: 8px;
   background-color: #212121;
   color: #fcf5e5;
+  cursor: pointer;
 }
 
 .modal__input:hover {

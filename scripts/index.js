@@ -55,10 +55,8 @@ function getCardElement(data) {
   return cardElement;
 }
 
-function openModal() {
-  editModalNameInput.value = profileName.textContent;
-  editModalDescriptionInput.value = profileDescription.textContent;
-  editModal.classList.add("modal_opened");
+function openModal(modal) {
+  modal.classList.add("modal_opened");
 }
 
 function closeModal() {
@@ -72,11 +70,16 @@ function handleEditFormSubmit(evt) {
   closeModal();
 }
 
-profileEditButton.addEventListener("click", openModal);
+profileEditButton.addEventListener("click", () => {
+  editModalNameInput.value = profileName.textContent;
+  editModalDescriptionInput.value = profileDescription.textContent;
+  openModal(editModal);
+});
+
 modalCloseButton.addEventListener("click", closeModal);
 editFormElement.addEventListener("submit", handleEditFormSubmit);
 
-for (let i = 0; i < initalCards.length; i++) {
-  const cardElement = getCardElement(initalCards[i]);
+initalCards.forEach((item) => {
+  const cardElement = getCardElement(item);
   cardsList.prepend(cardElement);
-}
+});

@@ -170,15 +170,14 @@
 
   .modal__image {
     width: 100%;
-    max-width: 80vw;
+    max-width: 288px;
     max-height: 80vh;
     border-radius: 4px;
-    display: block;
   }
 
   .modal__close-btn_type_preview {
     top: -40px;
-    right: 0;
+    right: 0px;
   }
 
   .modal__caption {

@@ -32,7 +32,7 @@ const profileDescription = document.querySelector(".profile__description");
 
 const editModal = document.querySelector("#edit-modal");
 const editFormElement = editModal.querySelector(".modal__form");
-const modalCloseButton = editModal.querySelector(".modal__close-btn");
+const editModalCloseButton = editModal.querySelector(".modal__close-btn");
 const editModalNameInput = editModal.querySelector("#profile-name-input");
 const editModalDescriptionInput = editModal.querySelector(
   "#profile-description-input"
@@ -119,7 +119,7 @@ profileEditButton.addEventListener("click", () => {
   openModal(editModal);
 });
 
-modalCloseButton.addEventListener("click", () => {
+editModalCloseButton.addEventListener("click", () => {
   closeModal(editModal);
 });
 

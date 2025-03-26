@@ -106,6 +106,7 @@
   border: 1px solid #212121;
   border-radius: 8px;
   opacity: 0.4;
+  margin: 8px 0 0;
 }
 
 .modal__input::placeholder {
@@ -128,6 +129,15 @@
 
 .modal__input:hover {
   opacity: 1;
+}
+
+.modal__error {
+  display: block;
+  color: #ff0000b2;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.1;
+  margin-top: 8px;
 }
 
 .modal.modal_opened {
